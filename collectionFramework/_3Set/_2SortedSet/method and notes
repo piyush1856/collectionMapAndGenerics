@@ -1,0 +1,45 @@
+TreeSet :
+==========
+-> all property of HashSet
+-> default order -> ascending
+-> underlying data structure is balanced tree.
+-> duplicate not allowed
+-> insertion order will not be preserved
+-> no index support
+-> element will be in sorted order
+-> even single 'null' not allowed -> null pointer exception
+
+
+comparable :
+==============
+-> within a class
+If we try to add any element in TReeSet must implement comparable interface,
+otherwise it throws class cast exception
+
+All the wrapper classes and String class internally implement Comparable interface.
+
+-> This comparable interface belong to java.lang package
+    This interface has only one method : public int compareTo(obj);
+    By the help of this method we need to define sorting logic inside Student class or any class which we want to add in tree set
+
+-> NOTE :  HashSet and LinkedHash set class verify uniqueness of an object using equals and hashCode method,
+            whereas TreeSet class verify the uniqueness of an obj by using compareTo()
+
+
+Comaparator Interface :
+=======================
+this inerface belong to java.util package
+-> define a sorting logic outside the class
+-> this interface also having one abstract method
+    public int compare(Object o1, Object o2);
+
+->  NOTE : using comparable we can define only one sorting logic within a class,
+            but, using comparator we define multiple sorting ligoc for a class outside a class
+
+
+
+
+
+
+
+

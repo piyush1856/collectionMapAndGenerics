@@ -1,0 +1,24 @@
+Vector Class :
+===============
+
+--> Vector List is similar to ArrayList but most of the methods are synchronized (thread safe)
+--> If you need thread safety then only you should use Vector class.
+
+Vector --> black and white TV
+ArralList --> color TV --> Collections.synchronozedList(ArrayList) --> this will make ArrayList synchronized
+so, avoid using vector.
+
+
+Stack Class :
+===============
+--> Not recommended to use since it is child class of vector
+--> Follow LIFO Principle
+
+
+
+
+
+
+
+
+

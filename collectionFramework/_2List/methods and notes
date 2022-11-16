@@ -1,0 +1,53 @@
+
+List : child interface of collection and declare the behavior of a collection to preserve the
+        sequence of an element.
+        It follows 0-based indexing.
+
+        Insertion order will be preserved and duplicates are allowed.
+        element can be inserted and accessed by their index
+
+
+        In addition to the Collection Interface method, It also has its own method :
+        public interface java.util.List<E> extends java.util.Collection<E> {
+          public abstract int size();
+          public abstract boolean isEmpty();
+          public abstract boolean contains(java.lang.Object);
+          public abstract java.util.Iterator<E> iterator();
+          public abstract java.lang.Object[] toArray();
+          public abstract <T> T[] toArray(T[]);
+          public abstract boolean add(E);
+          public abstract boolean remove(java.lang.Object);
+          public abstract boolean containsAll(java.util.Collection<?>);
+          public abstract boolean addAll(java.util.Collection<? extends E>);
+          public abstract boolean addAll(int, java.util.Collection<? extends E>);
+          public abstract boolean removeAll(java.util.Collection<?>);
+          public abstract boolean retainAll(java.util.Collection<?>);
+          public default void replaceAll(java.util.function.UnaryOperator<E>);
+          public default void sort(java.util.Comparator<? super E>);
+          public abstract void clear();
+          public abstract boolean equals(java.lang.Object);
+          public abstract int hashCode();
+          public abstract E get(int);   --> return element at a index
+          public abstract E set(int, E);  --> assign a element at a specified index and return the overridden object
+          public abstract void add(int, E);  -->
+          public abstract E remove(int); --> remove element at a index
+          public abstract int indexOf(java.lang.Object);
+          public abstract int lastIndexOf(java.lang.Object);
+          public abstract java.util.ListIterator<E> listIterator();
+          public abstract java.util.ListIterator<E> listIterator(int);
+          public abstract java.util.List<E> subList(int, int);
+          public default java.util.Spliterator<E> spliterator();
+          public static <E> java.util.List<E> of();
+          public static <E> java.util.List<E> of(E);
+          public static <E> java.util.List<E> of(E, E);
+          public static <E> java.util.List<E> of(E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E);
+          public static <E> java.util.List<E> of(E, E, E, E, E, E, E, E, E, E);
+          public static <E> java.util.List<E> of(E...);
+          public static <E> java.util.List<E> copyOf(java.util.Collection<? extends E>);
+        }

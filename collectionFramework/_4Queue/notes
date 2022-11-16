@@ -1,0 +1,17 @@
+Queue :
+=========
+-> if you want to represent a group od object before processing then we shouls use queue :
+    eg : sending email/sms to multiple people
+
+-> FIFO order by default but we can change or implement our own method  by using priority queue class
+-> java 1.5 version
+=> null insertion not allowed
+-> element inside queue should be Comparable or we can use Comparator
+
+
+NOTE : Inside the queue, the element will not be as sorted as inside the TreeSet, but by using its peek and poll method or remove method,
+       It will work according to comparable or comparator.
+
+DEQUE:
+=======
+-> Double ended queue

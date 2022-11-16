@@ -1,0 +1,28 @@
+HashSet :
+=============
+
+--> it is implementation of Set
+--> It internally uses hashing technique to store the value
+--> it is the best choice if our frequent operation is Searching -> O(1)
+--> Hashing uses O(1) time complexity
+
+-> duplicate not allowed
+-> Only one null insertion is allowed
+-> It doesn't preserve the sequence
+
+
+HashSet hs = new HashSet();
+-> default capacity is 16
+-> load factor -> 0.75 -> after completion of 75% of hasgSet a new HashSet will be created
+->   HashSet<Integer> hs = new HashSet<>(1200,0.8f);  --> not recommended to give load factor and capacity
+
+
+NOTE: All the collection classes are mutually inclusive, i.e, we can convert any any collection class to another collection class
+
+
+
+
+LinkedHashSet :
+==================
+**--> To preserve the insertion sequence use LinkedHash Set
+    -> It is child of HashSet.

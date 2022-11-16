@@ -1,0 +1,62 @@
+public interface java.util.Collection<E> extends java.lang.Iterable<E> {
+  public abstract int size();  - no. of element present in that object
+  public abstract boolean isEmpty(); - emplty or not
+  public abstract boolean contains(java.lang.Object); - search a particular element
+  public abstract java.util.Iterator<E> iterator(); - this method is inherited from iterable interface
+  public abstract java.lang.Object[] toArray(); - to convert any collection object element to normal onject array
+  public abstract <T> T[] toArray(T[]); -  to convert any collection array to object array
+  public default <T> T[] toArray(java.util.function.IntFunction<T[]>);
+  public abstract boolean add(E); - add any element to any collection class
+  public abstract boolean remove(java.lang.Object); - remove the element
+  public abstract boolean containsAll(java.util.Collection<?>);  -
+  public abstract boolean addAll(java.util.Collection<? extends E>); - add every element of a collection to another collection
+  public abstract boolean removeAll(java.util.Collection<?>);
+  public abstract boolean retainAll(java.util.Collection<?>); - retain element(s) and remove other
+  public abstract void clear(); - clear all
+
+  //overridden from Object class
+  public abstract boolean equals(java.lang.Object);
+  public abstract int hashCode();
+
+
+  //Added in java 1.8
+  public default boolean removeIf(java.util.function.Predicate<? super E>); -
+  public default java.util.Spliterator<E> spliterator();
+  public default java.util.stream.Stream<E> stream();
+  public default java.util.stream.Stream<E> parallelStream();
+}
+
+Note : There is no any concrete class which implement collection interface directly.
+
+
+Iterable : This interface introduced in java 1.5 and onward collection interface extends this interface. It belongs to java.lang.package
+            this method has only abstract method
+
+            public abstract Iterator iterator(); // return Iterator Interface
+            This Iterator interafce belongs to java.lang.package
+
+//java.lang.Iterable
+public interface java.lang.Iterable<T> {
+  public abstract java.util.Iterator<T> iterator();
+  public default void forEach(java.util.function.Consumer<? super T>);
+  public default java.util.Spliterator<T> spliterator();
+}
+
+*** Note : Collection f/w only supports Objects, Primitives are not allowed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

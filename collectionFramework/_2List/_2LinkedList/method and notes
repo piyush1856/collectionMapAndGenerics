@@ -1,0 +1,14 @@
+Linked List :
+================
+
+**--> It is the best choice if our frequent operation is insertion or deletion in middle because no shifting is allowed.
+--> Internally linkedList class is doubly linked list data structure.
+--> Rest features same as arrayList class : index value, maintain insertion order and allow duplicate and null.
+
+--> internal representation of data is also different (Nodes and Address).
+
+**--> Here, no capacity concept as ArrayList has 10(keeps on increasing), LinkedList will keep on adding and deleting the Nodes.
+
+
+**--> LinkedList class also implement Deque Interface along with List.
+

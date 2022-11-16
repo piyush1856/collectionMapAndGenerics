@@ -1,0 +1,8 @@
+
+-> Their are 2 utility classes belong (tools classes) to java.util package :
+
+-> java.util.Arrays: It is used to use simplify the normal array related task
+
+-> java.util.collections(c) : it is used to simplify the collection framework related task
+
+-> both classes some static method to simplify the task

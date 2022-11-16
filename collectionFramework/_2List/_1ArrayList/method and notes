@@ -1,0 +1,53 @@
+
+ArrayList(class) :
+====================
+
+Apart form inheriting the features and method of List, ArrayList has some addition benifits :
+
+    - It is the implementation of List Interface
+    - It dynamically increase/decrease in size
+    - Duplicate allowed
+    - null insertion allowed (multiple null)
+
+    **ArrayList class is best choice if operation is retrieval based on index.
+    **ArrayList IS-A List, Collection and Iterable
+
+
+Auto-Boxing And Unboxing :
+============================
+
+In java we have total 8 primitive datatypes are there, and corresponding wrapper classes
+--these wrapper classes belongs to java.lang package
+
+int x =10; // primitive value
+--before java 1.5, to add primitive to collection we need to wrap primitive to corresponding to wrapper class
+Integer i1 = Integer.valueOf(x);
+This concept is called boxing.
+
+int x = i1.intValue();
+This is called unboxing. Getting primitive from wrapper class object
+
+
+--* From java 1.8 onward we have auto-boxing and auto-unboxing.
+int i = 10;
+Integer i1 = i; //auto-boxing
+int x = i1 // auto-unboxing
+Automatically taken care by compiler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,148 @@
+Map(I) :
+=========
+
+
+                                           Map(I)
+                     _______________________ |_______________________
+                     |                       |                      |
+                   HashMap(c)              SortedMap(I)           HashTable
+                      |                         |
+                 LinkedHashMap(c)           TreeMap(C)
+
+
+-> Both key and values are object : primitive are not allowed
+-> key always should be unique but value can be duplicate
+-> each key-value pair is called Entry
+
+-> EntryInterface : Inside Map interface their is an inner Interface called EbtryInterface :
+             public K getKey()
+             public V getValue();
+             public V setValue(V value)
+
+-> A map is considered as a group of entries.
+-> without existing of map their is no chance of entry interface, hence,entry interface put under the map interface.
+
+Entry e = //invalid declaration
+Map.Entry e = // valid declaration
+
+
+HashMap(c) :
+===========
+
+-> key should be unique : it will replace the value of correspond key.
+-> value will be inserted according to hashcode : so insertion order will will not be preserved
+-> one null value allowed for key, multiple  for value.
+-> index concept is not applicable.
+
+
+LinkedHashMap :
+===============
+-> maintain insertion order
+
+
+TreeMap :
+============
+
+-> here entries will be sorted according to key and it should be comparable
+-> even single null value is not allowed in key
+-> In the treeMAp keys must be comparable or use Comparator otherwise we will gwt class cast exception.
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+HashTable :
+============
+-> Poor performance
+-> Most methods are Synchronized
+-> java 1.2 - legacy class
+-> same diff b/w arrayList and vector
+-> HashMap allows one null key and multiple null values whereas Hashtable doesn't allow any null key or value.
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+****Note : Inside a HashMap if we want to add any user- defined object as a key then
+it is recommended to override hashCode and equals method inside that class.
+**->if we want to make two object of the same class logically equal then we should override hashCode and equals method
+
+
+***Internal working of haskMap :
+-> Array of node will be created 0 to 15. - 16 bucket : all buckets are array of node
+->eg :  map.put(10,"delhi") -> put method internally will call hashcode of 10
+    10.hashCode -> int i = hash(100) -> index 2
+    delhi will be stired in 2nd no. index
+
+
+eg-2 : map.put(30,"mumbai")
+        -> hashCode will be called : 30.hashCode
+        -> hashFunction will called and it will return some index value : int i= hash(30)
+        -> suppose it will return 1
+        -> mumbai will be stored at 1
+
+        String s = map.get(30)
+        -> 30.hashCode()
+        -> hash(30.hashCode)
+        -> will return index 1  : int i= hash(30.hashCode());
+        -> return value at index 1 i.e mumbai
+
+-> based on hashcode of key, HashMap stores a value and return a value
+-> Hash function will always return int 0-15
+
+--> map.put(new Student("Piyush",10,100), "delhi") : (st1,delhi)
+    -> 154789522 = st1.hashCode();
+    -> int i = hash(154789522)
+    -> i=2 : on 2nd index the key value will be stored
+
+    map.get(st1);
+    ->78645564 = st1.hashCode(); --> different hashcode will be returned because hashcode method is not over written and
+                  hence different index will be returned by hash function as well and appropriate value will not be returned
+              so, it is recommended to override the hashcode method while using MAp
+
+****--> if same hashcode is returned than a new node will be create while putting the value and address of new node is given to the
+            the previous node at the same index and so on.  Hence a linked like structure will be formed
+            at same index of Map. This happen during the clashes while putting.
+
+            when N no. element are added at same index, a self balanced binary tree will be created automatically after a certain threshold is triggered
+            so, In constant time we will get a value.
+
+            Since a linkedList like structure is formed at a index so, while searching overwriting of equals() is necessary
+            to compare if the required value is same or noty, S0, it come in contract with hashCode method.
+
+
+====================================================================================================================================================================
+
+--> GENERICS :
+===============
+-> INTRODUCED in java 1.5 version
+-> makes code type safe
+-> type casting not required
+-> compile time exception checking : problem will not occur in runtime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
